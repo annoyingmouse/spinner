@@ -1,30 +1,63 @@
 <!doctype html>
 <html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-    </head>
-    <body>
-        <p>Work with spinners : <a href="https://codepen.io/annoyingmouse/pen/jZyPQp" target="_blank">Inspiration here</a></p>
-        <span class="spinner spinner-android">
-            <svg viewBox="0 0 64 64">
-                <g>
-                    <circle stroke-width="6" stroke-linecap="round" r="26" cx="32" cy="32" fill="none"></circle>
-                </g>
-            </svg>
-        </span>
-        <span class="spinner spinner-android">
-            <svg viewBox="0 0 64 64">
-                <g>
-                    <circle stroke-width="6" stroke-linecap="round" r="26" cx="32" cy="32" fill="none"></circle>
-                </g>
-            </svg>
-        </span>
-        <script src="js/main.js"></script>
-    </body>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/sakura.css">
+    <style>
+      .spinner {
+        fill: #444;
+      }
+      .spinner-android {
+        stroke: #4b8bf4;
+      }
+      .spinner svg {
+        width: 19% !important;
+        height: 85px !important;
+      }
+      .spinner svg circle{
+        animation: colors 5.6s ease-in-out infinite;
+      }
+      @keyframes colors {
+        0% {
+          stroke: #da4f49;
+        }
+        25% {
+          stroke: #2A80B9;
+        }
+        50% {
+          stroke: #5bb75b;
+        }
+        75% {
+          stroke: #e78730;
+        }
+        100% {
+          stroke: #0a79fd;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p>Work with spinners : <a href="https://codepen.io/annoyingmouse/pen/jZyPQp" target="_blank">Inspiration here</a></p>
+    <span class="spinner spinner-android">
+      <svg viewBox="0 0 64 64">
+        <g>
+          <circle stroke-width="6" stroke-linecap="round" r="26" cx="32" cy="32" fill="none"></circle>
+        </g>
+      </svg>
+    </span>
+    <span class="spinner spinner-android">
+      <svg viewBox="0 0 64 64">
+        <g>
+          <circle stroke-width="6" stroke-linecap="round" r="26" cx="32" cy="32" fill="none"></circle>
+        </g>
+      </svg>
+    </span>
+    <wc-old-spinner></wc-old-spinner>
+    <script src="js/main.js"></script>
+    <script type="module" src="./wc-old-spinner.js"></script>
+  </body>
 </html>
